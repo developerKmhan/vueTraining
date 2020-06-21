@@ -1,0 +1,25 @@
+<html>
+    <header class="header">
+        <h1>if문</h1>
+    </header>
+    <body>
+      <div id="root">
+        <div v-if="liked">if문에 의해 안보이는 요소</div>
+        <button v-else v-on:click="onClickButton">if문에 의해 보이는 요소</button>
+      </div>
+    </body>
+    <script type="text/javascript" src="./vue.js"></script>
+      <script>
+       const app = new Vue({
+        el: '#root',
+        data: {
+          liked: false,
+        },
+        methods: {
+         onClickButton() {
+            this.liked = true;
+         }
+        }
+       });
+      </script>
+</html>
